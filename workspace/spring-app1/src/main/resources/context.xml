@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="msg" class="com.demo.spring.Message">
+		<property name="header" value="Lunch Break" />
+		<property name="body" value="No Lunch Today" />
+	</bean>
+	<bean id="msg1" class="com.demo.spring.Message">
+		<property name="header" value="Lunch Break" />
+		<property name="body" value="No Lunch Today" />
+	</bean>
+	
+	<bean id="mail" class="com.demo.spring.Mail" autowire="byType">
+		<property name="fromAddress" value="the trainer" />
+		<property name="toAddress" value="All" />
+		<!-- <property name="message" ref="msg" /> -->
+	</bean>
+</beans>

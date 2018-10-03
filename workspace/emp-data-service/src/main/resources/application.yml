@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdb?useSSL=false
+    username: root
+    password: root
+    name: myds
+  application:
+    name: emp-service
+    
+logging:
+  level:
+    org.springframework.security: debug
+    
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+      
